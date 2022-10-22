@@ -1,7 +1,13 @@
 package main
 
-import "log"
+import (
+	"log"
+
+	"github.com/liuf66/kvgo/config"
+	"github.com/liuf66/kvgo/server"
+)
 
 func main() {
-	log.Println("kv go started!")
+	server.Start(config.DefaultServerConfig)
+	log.Println("kvgo started!")
 }
